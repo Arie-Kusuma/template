@@ -1,0 +1,19 @@
+soal,rating,lampiran,jawaban,key
+jelaskan pengertian gerbang logika,1,soal-ic.jpg,gerbang logika adalah sebuah entitas untuk melakukan pengolahan input bilangan biner yang menggunakan teori matematika boolean.,"input,biner,boolean,matematika,output"
+jelaskan pengertian gerbang logika,1,soal-ic.jpg,gerbang logika adalah sebuah entitas untuk melakukan pengolahan input bilangan biner yang menggunakan teori matematika boolean.,"input,biner,boolean,matematika,output"
+jelaskan pengertian gerbang logika,1,soal-ic.jpg,gerbang logika adalah sebuah entitas untuk melakukan pengolahan input bilangan biner yang menggunakan teori matematika boolean.,"input,biner,boolean,matematika,output"
+jelaskan pengertian gerbang logika,1,soal-ic.jpg,gerbang logika adalah sebuah entitas untuk melakukan pengolahan input bilangan biner yang menggunakan teori matematika boolean.,"input,biner,boolean,matematika,output"
+"jelaskan identitas dari gerbang logika  nomor 1 yang tertera pada gambar. <mark>Format jawawaban = nama gerbang, A/B=Y,A/B=Y,A/B=Y,dst.</mark>",3,gerlok-soal-1.jpg,"gerbang X/NOR, 0/0=1,0/1=0,1/0=0,1/1=1","XNOR,0/0=1,0/1=0,1/0=0,1/1=1"
+"jelaskan identitas dari gerbang logika  nomor 2 yang tertera pada gambar. <mark>Format jawawaban = nama gerbang, A/B=Y,A/B=Y,A/B=Y,dst.</mark>",2,gerlok-soal-1.jpg,"gerbang NAND, 0/0=1,0/1=1,1/0=1,1/1=0","NAND,0/0=1,0/1=1,1/0=1,1/1=0"
+"jelaskan identitas dari gerbang logika  nomor 3 yang tertera pada gambar. <mark>Format jawawaban = nama gerbang, A/B=Y,A/B=Y,A/B=Y,dst.</mark>",1,gerlok-soal-1.jpg,"gerbang AND, 0/0=0,0/1=0,1/0=0,1/1=1","AND,0/0=0,0/1=0,1/0=0,1/1=1"
+"jelaskan identitas dari gerbang logika  nomor 4 yang tertera pada gambar. <mark>Format jawawaban = nama gerbang, A/B=Y,A/B=Y,A/B=Y,dst.</mark>",2,gerlok-soal-1.jpg,"gerbang OR, 0/0=0,0/1=1,1/0=1,1/1=1","OR,0/0=0,0/1=1,1/0=1,1/1=1"
+"jelaskan identitas dari gerbang logika  nomor 5 yang tertera pada gambar. <mark>Format jawawaban = nama gerbang, A/B=Y,A/B=Y,A/B=Y,dst.</mark>",2,gerlok-soal-1.jpg,"gerbang NOR, 0/0=1,0/1=0,1/0=0,1/1=0","NOR,0/0=1,0/1=0,1/0=0,1/1=0"
+"jelaskan identitas dari gerbang logika  nomor 6 yang tertera pada gambar. <mark>Format jawawaban = nama gerbang, A/B=Y,A/B=Y,A/B=Y,dst.</mark>",2,gerlok-soal-1.jpg,"gerbang X/OR, 0/0=0,0/1=1,1/0=1,1/1=0","XOR,0/0=0,0/1=1,1/0=1,1/1=0"
+"jelaskan identitas dari gerbang logika  nomor 7 yang tertera pada gambar.<mark>Format jawawaban = nama gerbang, A/B=Y,A=Y,dst.</mark>",1,gerlok-soal-1.jpg,"gerbang NOT, 0=1,1=0","NOT,0=1,1=0"
+"jika kamu harus menghadapi adik kelas yang bertanya perdedaan antara gerbang AND dan gerbang OR, bagaimana kamu menjelaskan cara kerja keduanya agar adik kelasmu paham tentang cara kerja kedua gerbang tersebut. ",2,gerlok-soal-1.jpg,"gerbang AND menggunakan operasi perkalian, gerbang OR menggunakan operasi penjumlahan.","AND,OR,perkalian,penjumlahan"
+"jika kalian dihadapkan dengan adik kelas yang bertanya tentang cara kerja gerbang NOT, bagaimana kalian menjelaskan cara kerja gerbang tersebut secara simpel agar mudah dimengerti oleh adik kelasmu.",2,gerlok-soal-1.jpg,gerbang NOT menggunakan sistem invert atau membalik masukan.,"NOT,membalik,invert"
+berapa output dari rangkaian pada gambar tersebut jika A = 0 dan B = 0,3,gerlok-soal-2.jpg,0,0
+berapa output dari rangkaian pada gambar tersebut jika A = 0 dan B = 1,3,gerlok-soal-2.jpg,1,1
+berapa output dari rangkaian pada gambar tersebut jika A = 1 dan B = 0,3,gerlok-soal-2.jpg,1,1
+berapa output dari rangkaian pada gambar tersebut jika A = 1 dan B = 1,3,gerlok-soal-2.jpg,1,1
+berapa output dari rangkaian pada gambar tersebut jika A = 1 dan B = 1,3,gerlok-soal-2.jpg,1,1
