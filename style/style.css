@@ -92,7 +92,7 @@ nav{
 
 #title{	
 	/*background: red;*/	
-	display: none;
+	display: block;
 	font-weight: 400;
 	font-family: mainconten;
 	font-size: 1vw;
