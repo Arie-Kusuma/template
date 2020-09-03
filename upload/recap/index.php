@@ -38,7 +38,7 @@
 						$_SESSION['alert'] = "kode yang dimasukan salah";
 					};
 					// $kodesoal_input = $_POST['kode'];
-					$sql ="SELECT * FROM ". $kodesoal_input ." order by date desc ,nilai desc, time asc";
+					$sql ="SELECT * FROM ". $kodesoal_input ." order by date asc ,nilai desc, time asc";
 					$req1 = mysqli_query($conns, $sql);
 					if ($req1) {
 						if (mysqli_num_rows($req1)>0){
