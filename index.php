@@ -264,7 +264,7 @@ session_start();
 					
 					<h2 id="title">
 
-						Sistem Ujian Essay <mark id="dc">-open beta-</mark>
+						Sistem Ujian Essai <mark id="dc">-open beta-</mark>
 
 <!-- 								// if (isset($_SESSION['alert'])) {
 								// 	echo $_SESSION['alert'];
