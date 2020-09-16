@@ -1,4 +1,11 @@
 <?php require_once('../php/auth.php');
+
+	if (rede() == 1) {
+
+		header('location:/template/lhoelhoe');
+
+	}
+
 	session_start();
 
 	if (isset($_SESSION['code'])) {

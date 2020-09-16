@@ -31,7 +31,14 @@ jangan dipakai, programnya jelek
 
 <?php 
 require_once('php/auth.php');
-session_start(); 
+
+if (rede() == 1) {
+
+	header('location:/template/m');
+
+}
+
+session_start();
 
 
 	if (isset($_SESSION['nis']) && isset($_SESSION['tformula'])) {
