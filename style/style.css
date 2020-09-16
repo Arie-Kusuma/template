@@ -1296,3 +1296,21 @@ td{
 	font-size: 9rem;
 }
 /*style for disclaimer stop here*/
+
+
+/*M*/
+#m-index{
+	background-color: red;
+}
+#m-top-title{
+	width: 100vw;
+	height: 100px;
+	background-color: red;
+}
+#m-title{
+	background-color: red;
+	color: red;
+}
+
+
+/*M stop*/
