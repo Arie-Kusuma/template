@@ -1300,17 +1300,93 @@ td{
 
 /*M*/
 #m-index{
-	background-color: red;
+	background-color: white;
 }
 #m-top-title{
-	width: 100vw;
-	height: 100px;
-	background-color: red;
+	margin: auto;
+	display: flex;
+	width: 85vw;
+	height: auto;
+	background-color: transparent;
+	padding: 7.5vw 0;
 }
 #m-title{
-	background-color: red;
-	color: red;
+	font-size: 5vw;
+	width: 70%;
+	background-color: transparent;
+	color: black;
 }
+#m-m-title{
+	font-size: 4vw;
+	text-align: right;
+	font-weight: 100;
+	width: 30%;
+	background-color: transparent;
+	color: black;
+	margin: auto;
+}
+#mid-title{
+	margin: auto;
+	display: flex;
+	width: 85vw;
+	height: auto;
+	background-color: transparent;	
+}
+#m-date{
+	width: 60%;
+	font-size: 10vw;
+	background-color: transparent;
+}
+#img-container{
+	width: 40%;
+	background-color: transparent;
+}
+#m-arie{
+	width: 100%;
+}
+#m-index-formcontainer{
+	margin: auto;
+	margin-top: 20vw;
+	width: 85vw;
+	height: auto;
+	background-color: transparent;
 
-
+}
+#m-tt-atas{
+	margin-bottom: 10vw;
+	width: 100%;
+	background-color: transparent;
+}
+#m-form-container{
+	width: 100%;
+}
+#m-n-awal,#m-butt-reedeem{
+	/*background-color: red;*/
+	width: 100%;
+}
+h4#m-n-awal{
+	font-size: .7pc;
+	color: #626262;
+	background-color: transparent;
+}
+#m-input-identitas,#m-input-identitas-e{
+	width: 90%;
+	border-radius: 2vw;
+	background-color: transparent;
+	border: solid .3vw #cacaca;
+	height: 10vw;
+	padding: 0 5%;
+	font-size: 3.5vw;
+}
+#m-butt-reedeem{
+	border-radius: 2vw;
+	background:linear-gradient(to bottom left,hsla(150,40%,50%,1),#16db93);
+	border: none;
+	font-family: mainconten;
+	font-weight: 400;
+	color: white;
+	height: 15vw;
+	padding: 0 5%;
+	font-size: 3.5vw;
+}
 /*M stop*/
