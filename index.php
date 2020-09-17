@@ -303,7 +303,8 @@ session_start();
 									echo "Masukan Data";
 								}
 
-							?>					</h2>
+							?>
+					</h2>
 					<form id="form-container" method="post" action="php/login.php">
 						<h4 id="n-awal">nomor induk siswa :</h4>
 						<input autofocus id="input-identitas" type="text" name="nis" placeholder="Nis Kamu">

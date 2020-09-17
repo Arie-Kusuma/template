@@ -1297,10 +1297,16 @@ td{
 }
 /*style for disclaimer stop here*/
 
+/*-------------*/
+/*-------------*/
+/*------M------*/
+/*-------------*/
+/*-------------*/
 
-/*M*/
 #m-index{
+	min-height: 150vh;
 	background-color: white;
+	padding-bottom: 50vh;
 }
 #m-top-title{
 	margin: auto;
@@ -1350,6 +1356,7 @@ td{
 	width: 85vw;
 	height: auto;
 	background-color: transparent;
+	position: relative;
 
 }
 #m-tt-atas{
@@ -1376,6 +1383,7 @@ h4#m-n-awal{
 	border: solid .3vw #cacaca;
 	height: 10vw;
 	padding: 0 5%;
+	font-weight: 400;
 	font-size: 3.5vw;
 }
 #m-butt-reedeem{

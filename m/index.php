@@ -19,14 +19,12 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sistem Ujian Essai</title>
 	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
-	<script type="text/javascript" src="../js/jquery.waves.js"></script>
-	<link rel="stylesheet" type="text/css" href="./../style/jquery.waves.min.css">
+	<!-- <script type="text/javascript" src="../js/jquery.waves.js"></script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="./../style/jquery.waves.min.css"> -->
 	<link rel="sortcut icon" type="image/x-icon" href="../faviconn.ico"></head>
 <body id="m-index">
 
@@ -270,8 +268,21 @@ session_start();
 		
 	</div>
 
-
 <script type="text/javascript">
+
+
+	$( "input" ).focus(function() {
+
+			$("#mid-title").hide();
+
+	});
+	$( "input" ).blur(function() {
+
+			$("#mid-title").show();
+
+	});
+
+
 	 function clockTick()    {
        currentTime = new Date();
        month = currentTime.getMonth() + 1;
