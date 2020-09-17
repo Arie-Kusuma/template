@@ -1,14 +1,17 @@
 <?php 
 require_once('../php/auth.php');
 
-// if (rede() == 0) {
+$au = rede();
 
-// 	header('location:/template/');
+if ($au == 0) {
 
-// }
+	header('location:/template/');
+
+}
 
 session_start();
 
+	$_SESSION['auth'] = $au;
 
 	if (isset($_SESSION['nis']) && isset($_SESSION['tformula'])) {
 		header('location:ujian/');
@@ -271,12 +274,12 @@ session_start();
 <script type="text/javascript">
 
 
-	$( "input" ).focus(function() {
+	$( "input:not(#m-butt-reedeem)" ).focus(function() {
 
 			$("#mid-title").hide();
 
 	});
-	$( "input" ).blur(function() {
+	$( "input:not(#m-butt-reedeem)" ).blur(function() {
 
 			$("#mid-title").show();
 

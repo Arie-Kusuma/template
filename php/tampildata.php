@@ -13,6 +13,8 @@ $lampiran = array();
 
 $m = 0;
 
+// print_r($formula);
+
 while ($m<=count($formula)-1) {
 
 	array_push($soal, $indexsoal[$formula[$m]]);

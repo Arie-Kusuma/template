@@ -1,5 +1,6 @@
 <?php 
-require_once('server.php');
+require_once(__DIR__ . '/server.php');
+require_once(__DIR__ . '/auth.php');
 $code = $_SESSION['code'];
 $q = "SELECT * from listsoal WHERE code='". $code ."' LIMIT 1";	
 $namasoal = '';
@@ -31,7 +32,17 @@ $sb = 0;
 
 
 $csv = array();
-$lines = file("../soaldir/".$namasoal, FILE_IGNORE_NEW_LINES);
+
+
+$au = rede();
+
+if ($au == 1) {
+
+			$lines = file("../../soaldir/".$namasoal, FILE_IGNORE_NEW_LINES);
+
+} else{
+			$lines = file("../soaldir/".$namasoal, FILE_IGNORE_NEW_LINES);
+}
 
 	foreach ($lines as $key => $value)
 	{

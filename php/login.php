@@ -38,7 +38,15 @@
 								  	$_SESSION['durasi'] = $atz['durasi'];
 								  	$_SESSION['matauji'] = $atz['matauji'];
 
-									header('location: ../ujian');
+
+								  	if ($_SESSION['auth'] == 1) {
+
+										header('location: ../ujian/m');
+								  	}else{
+
+										header('location: ../ujian');
+								  	}
+
 
 								}else {
 								  	$_SESSION['alert'] = "kode yang dimasukan salah";

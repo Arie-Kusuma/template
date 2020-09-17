@@ -64,6 +64,8 @@ function cekifexist($nis,$kode){
 
 		$tformula = array_merge($indexM,$indexS,$indexB);
 
+		// print_r($tformula);
+
 		$_SESSION['indexM'] = $indexM;
 		$_SESSION['indexS'] = $indexS;
 		$_SESSION['indexB'] = $indexB ;
