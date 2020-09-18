@@ -61,8 +61,8 @@ session_start();
 	<title>Sistem Ujian Essai</title>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<script type="text/javascript" src="js/jquery.waves.js"></script>
-	<link rel="stylesheet" type="text/css" href="style/jquery.waves.min.css">
+	<!-- <script type="text/javascript" src="js/jquery.waves.js"></script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="style/jquery.waves.min.css"> -->
 	<link rel="sortcut icon" type="image/x-icon" href="faviconn.ico">
 </head>
 

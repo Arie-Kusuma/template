@@ -1532,5 +1532,7 @@ h4#m-n-awal{
 	max-width: 96%;
 	min-width: 96%;
 	font-size: 1pc;
+	overflow: visible;
+	height: auto;
 }
 /*M stop*/

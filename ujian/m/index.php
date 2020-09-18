@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <?php 
 require_once('../../php/server.php');
+
+require_once('../../php/auth.php');
+
+$au = rede();
+
+if ($au == 0) {
+
+	header('location:/template/');
+
+}
 session_start();
 	if (!isset($_SESSION['nis'])) {
 		header('location:../');
+		
 		session_destroy();
 	}else {
 
@@ -18,6 +29,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ujian</title>
 	<script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../../js/autosize.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../style/style.css">
 	<script src="../../js/easytimer.min.js"></script>
 	<script type="text/javascript" src="../../js/blowup.js"></script>
@@ -96,6 +108,9 @@ session_start();
 
 	</div>
 	<script type="text/javascript">
+
+
+		autosize($('textarea'));	    
 	    
 	    var timer = new easytimer.Timer();
 		let jumsol = <?php echo $_SESSION['jumsol'] ?>;
