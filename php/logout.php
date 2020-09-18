@@ -1,4 +1,8 @@
-<?php 
+<?php
+require_once('../php/auth.php');
+
+$aut = rede();
+
 session_start();
 if (isset($_POST['keluar'])) {
 	session_destroy();
@@ -11,6 +15,8 @@ if (isset($_POST['keluar'])) {
 
 
 	if (isset($_POST['fnish'])) {
+		$_SESSION['auth'] = 0;
+
 		require_once('getdata.php');
 		require_once('getformula.php');
 		require_once('tampildata.php');
@@ -24,7 +30,16 @@ if (isset($_POST['keluar'])) {
 			// print_r($outjawaban);
 		require_once('rkoreksi.php');
 
-	  	header('location:../result/');
+
+		  	if ($aut == 1) {
+
+		  		header('location:../result/m/');
+		  	}else{
+
+		  		header('location:../result/');
+		  	}
+
+	  	// header('location:../result/');
 
 	};
 

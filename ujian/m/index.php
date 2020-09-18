@@ -78,8 +78,7 @@ session_start();
 		<div id="m-action-atas">
 			<h5 id="m-maincoundown">00:00:00</h5>
 			<form method="post" action="../../php/logout.php">
-				<input id="m-finish-1" type="submit" name="keluar" value="Selesai">
-			</form>		
+				<input id="m-finish-1" type="submit" name="fnish" value="Selesai">
 		</div>
 		<div id="m-main-control">
 			<mark id="aguspancing">1.</mark>
@@ -105,6 +104,7 @@ session_start();
 		</div>
 
 <?php } ?>
+			</form>
 
 	</div>
 	<script type="text/javascript">

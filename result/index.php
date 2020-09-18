@@ -1,3 +1,12 @@
+<?php 
+require_once('../php/auth.php');
+
+$au = rede();
+
+if ($au == 0) {
+	header(__DIR__.'/m/');
+}
+ ?>
 <html>
 <head>
 	<title>result</title>

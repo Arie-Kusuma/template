@@ -33,8 +33,12 @@ $sb = 0;
 
 $csv = array();
 
+	if (isset($_SESSION['auth'])) {
+		$au = $_SESSION['auth'];
+	}else{
+		$au = rede();
+	}
 
-$au = rede();
 
 if ($au == 1) {
 
