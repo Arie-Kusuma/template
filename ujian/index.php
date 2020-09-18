@@ -221,10 +221,10 @@ session_start();
 				<?php echo $soal[$i]."<br>";?>
 			<div id="container-jawaban">
 						<textarea placeholder="jawab disini" name=<?php echo "jawaban".$i; ?> id=<?php echo "ta".$i; ?> ></textarea>
-			</div>	
+			</div>
 		</div>
 		<div id=<?php echo "container-lampiran".$i; ?>>
-			<img  id=<?php echo "lampiran".$i; ?> src=<?php echo "../imagedir/".$lampiran[$i];?>>			
+			<img  id=<?php echo "lampiran".$i; ?> src=<?php echo "../imagedir/".$lampiran[$i];?>>
 			<div style="background: transparent; width: auto;float: left; margin-top: 2vh;padding: 1vh;border-radius: 1vh; -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;">
 				<mark style="margin: 0;font-size: .9vw;color: #393939;" title="zoom out" class="zout" id=nxt-btn><!-- &#128269;  -->-<!-- &#10134; --></mark>
 				<mark style="margin: 0;font-size: .9vw;color: #393939;" title="zoom" class="zzzval" id=pref-btn><!-- &#128269; -->Zoom : 100%</mark>
@@ -483,12 +483,12 @@ session_start();
 				$("#gofar-hilman").show();
 				$("#flag-container").show();
 				timer.start({countdown: true, startValues: {seconds: durasi}});
-					$('#flag-waktu #coundown').html(timer.getTimeValues().toString());
+					$('#coundown').html(timer.getTimeValues().toString());
 				timer.addEventListener('secondsUpdated', function (e) {
-				    $('#flag-waktu #coundown').html(timer.getTimeValues().toString());
+				    $('#coundown').html(timer.getTimeValues().toString());
 				});
 				timer.addEventListener('targetAchieved', function (e) {
-				    $('#flag-waktu #coundown').html('WAKTU HABIS');
+				    $('#coundown').html('WAKTU HABIS');
 				    $(finishbut).trigger("click");
 				});
 				$("#sub-container-soal"+0+" textarea").focus();

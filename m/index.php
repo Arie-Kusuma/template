@@ -14,7 +14,14 @@ session_start();
 	$_SESSION['auth'] = $au;
 
 	if (isset($_SESSION['nis']) && isset($_SESSION['tformula'])) {
-		header('location:ujian/');
+		if (rede() == 1) {
+
+			header('location:ujian/m/');
+
+		}else{
+			header('location:ujian/');
+			
+		}
 	}
 
 ?>

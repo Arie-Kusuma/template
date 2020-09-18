@@ -32,17 +32,26 @@ jangan dipakai, programnya jelek
 <?php 
 require_once('php/auth.php');
 
-if (rede() == 1) {
+	if (rede() == 1) {
 
-	header('location:/template/m');
+		header('location:/template/m');
 
-}
+	}
 
 session_start();
 
 
 	if (isset($_SESSION['nis']) && isset($_SESSION['tformula'])) {
-		header('location:ujian/');
+		
+		if (rede() == 1) {
+
+			header('location:ujian/m/');
+
+		}else{
+			header('location:ujian/');
+			
+		}
+
 	}
 
 ?>

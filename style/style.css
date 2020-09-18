@@ -1311,7 +1311,7 @@ td{
 #m-top-title{
 	margin: auto;
 	display: flex;
-	width: 85vw;
+	width: 90vw;
 	height: auto;
 	background-color: transparent;
 	padding: 7.5vw 0;
@@ -1334,7 +1334,7 @@ td{
 #mid-title{
 	margin: auto;
 	display: flex;
-	width: 85vw;
+	width: 90vw;
 	height: auto;
 	background-color: transparent;	
 }
@@ -1353,11 +1353,10 @@ td{
 #m-index-formcontainer{
 	margin: auto;
 	margin-top: 20vw;
-	width: 85vw;
+	width: 90vw;
 	height: auto;
 	background-color: transparent;
 	position: relative;
-
 }
 #m-tt-atas{
 	margin-bottom: 10vw;
@@ -1396,5 +1395,142 @@ h4#m-n-awal{
 	height: 15vw;
 	padding: 0 5%;
 	font-size: 3.5vw;
+}
+#m-ujian{
+	background-color: white;
+	overflow: auto;
+}
+#m-fpage{
+	position: absolute;
+	width: 100vw;
+	min-height: 100vh;
+	/*background-color: cyan;*/
+	background: white;
+	z-index: 999999999;
+	overflow: auto;
+
+}
+#m-container-main{
+	color: #343a40;
+	margin-bottom: 10%;
+	width: 100vw;
+	height: 110vw;
+	background-color: white;
+}
+#m-container-main h1{
+	margin: auto;
+	width: 90%;
+	padding: 20% 0 10% 0;
+	font-size: 3pc;
+	background-color: transparent;
+
+}
+#m-container-main h3{
+	margin: auto;
+	width: 90%;
+	background-color: transparent;
+	padding-bottom: 5%;
+
+}
+#m-container-main h5{
+	font-size: 1pc;
+	font-weight: 100;
+	margin: auto;
+	width: 90%;
+	background-color: transparent;
+}
+#m-caution{
+	border-radius: 2vw;
+	width: 90%;
+	background-color: transparent;
+	border: 1vw solid #f00b51;
+	margin: auto;
+}
+#m-caution h3{
+	text-align: left;
+	font-size: 1.5pc;
+	padding: 10%;
+	margin: auto;
+	color: #f00b51;
+}
+#m-f-action{
+	padding: 5% 0;
+	width: 90%;
+	margin:auto;
+}
+#m-f-action input,button{
+	border-radius: 1vw;
+	font-weight: 800;
+	font-family: mainconten;
+	border: none;
+	margin: 3% 0;
+	padding: 6% 0;
+	color: white;
+	width: 100%;
+}
+#m-f-action button{
+	background:linear-gradient(to bottom left, #3499FF , #3A3985);
+}
+#m-f-action input{
+	background:linear-gradient(to bottom left, #f00b51 , #730062);
+}
+#m-mainsoal-container{
+	width: 90%;
+	margin: auto;
+	background-color: white;
+}
+#m-action-atas{
+	padding: 5% 0;
+	background-color: white;
+	display: flex;
+}
+#m-action-atas h5{
+	font-size: 2pc;
+	width: 100%;
+	background-color: white;
+}
+#m-finish-1{
+	border: none;
+	background:  #276174;
+	/*, #4ecdc4)*/
+	border-radius: 1vw;
+	color: white;
+	font-weight: 800;
+	font-family: mainconten;
+	font-size: 1pc;
+	width: 100px;
+	height: 100%;
+}
+#m-main-control{
+	display: flex;
+	background-color: white;
+	padding: 10% 0;
+}
+[id^='m-container-conten-ujian']{
+	width: 	100%;
+}
+[id^='m-container-contens'] {
+	width: 100%;
+	margin: 5% 0;
+	padding: 0;
+}
+#m-container-contens-soal{
+	width: 90%;
+	border-radius: 2vw;
+	padding: 5%;
+	border: 1px solid #dfdfdf;
+	background-color: transparent;
+}
+#m-container-contens-lampiran{
+	height: auto;
+}
+#m-container-contens-textarea{
+	background-color: transparent;
+
+}
+#m-container-contens-textarea textarea{
+	max-width: 96%;
+	min-width: 96%;
+	font-size: 1pc;
 }
 /*M stop*/
