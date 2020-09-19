@@ -33,7 +33,7 @@ if (isset($_POST['keluar'])) {
 
 		  	if ($aut == 1) {
 
-		  		header('location:../result/m/');
+		  		header('location:../result/');
 		  	}else{
 
 		  		header('location:../result/');

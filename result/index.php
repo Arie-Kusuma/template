@@ -1,16 +1,9 @@
-<?php 
-require_once('../php/auth.php');
-
-$au = rede();
-
-if ($au == 0) {
-	header(__DIR__.'/m/');
-}
- ?>
 <html>
 <head>
 	<title>result</title>
 	<link rel="sortcut icon" type="image/x-icon" href="../faviconn.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" type="text/css" href="../style/style.css">
 	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
@@ -143,10 +136,10 @@ if ($au == 0) {
 			}
 			return $output;
 		}
-		session_destroy();
+		// session_destroy();
 	}else{
-		session_destroy();
-		header('location:../');
+		// session_destroy();
+		// header('location:../');
 	}
 		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 		$pdf->SetCreator(PDF_CREATOR);
@@ -211,7 +204,7 @@ if ($au == 0) {
  	<div id="img-container-r">
 		<div id="cacatan-container">
 			
- 		<h1 style="color: #264653;font-size: 1.7vw;font-weight: 100;padding: 1vw 5vw;">Catatan:</h1>
+ 		<h1 id="m-catatan" style="color: #264653;font-size: 1.7vw;font-weight: 100;padding: 1vw 5vw;">Catatan:</h1>
 			<?php 
 				$u = count($_SESSION['cctnout'])-1;
 				for ($i=0; $i <= $u ; $i++) { 
@@ -229,6 +222,32 @@ if ($au == 0) {
 		</div>
 	</div>
  <script type="text/javascript">
+ 	new ResizeSensor(jQuery('body'),function(){
+		console.log($('body').width());	
+		if ($('body').width() <= 730) {
+			responsive($('body').width());
+		}
+	});
+
+ 	function responsive(width){
+
+ 		$('#result-c-container').width(width);
+ 		$('#img-container-r').width(width);
+ 		$('#result').css("overflow","auto");
+ 		$("#m-catatan").css("font-size","2pc");
+ 		$("div[id^='s-cctn-con']").css("padding",width/20+ "0");
+ 		$("div[id^='s-cctn-con']").css("background","#cacaca");
+ 		$("div[id^='s-cctn-con']").css("max-height","unset");
+ 		// $("div[id^='s-cctn-con']").css("line-height",width/50);
+
+ 	}
+
+
+
+
+
+
+
  	function mapps(num,in_min,in_max,out_min,out_max){
  		return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
  	}
