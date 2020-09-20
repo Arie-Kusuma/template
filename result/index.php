@@ -136,10 +136,10 @@
 			}
 			return $output;
 		}
-		// session_destroy();
+		session_destroy();
 	}else{
-		// session_destroy();
-		// header('location:../');
+		session_destroy();
+		header('location:../');
 	}
 		$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 		$pdf->SetCreator(PDF_CREATOR);
