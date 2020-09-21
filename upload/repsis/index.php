@@ -1,5 +1,4 @@
-<?php require_once('../php/auth.php');
-
+<?php require_once('../../php/auth.php');
 	if (rede() == 1) {
 
 		header('location:/template/lhoelhoe');
@@ -8,132 +7,175 @@
 
 	session_start();
 
-	if (isset($_SESSION['code'])) {
-		header('location:../upload');
-		session_destroy();
-	}?>
+?>
+
 <html>
 <head>
 	<title>upload file</title>
-		<link rel="sortcut icon" type="image/x-icon" href="../faviconn.ico">
+		<link rel="sortcut icon" type="image/x-icon" href="../../faviconn.ico">
 
-	<link rel="stylesheet" type="text/css" href="../style/style.css">
+	<link rel="stylesheet" type="text/css" href="../../style/style.css">
 	<meta charset="utf-8">
 </head>
 <body id="upload">
  <div id="main_upload_container">
  		<div id="title-container">
-	 		<h1 id="top_title">Upload Soal Baru</h1>
+	 		<h1 id="top_title">Repo Siswa</h1>
  			<h1 id="date" style="border: none;font-weight: 900;font-size: 1.1vw;">{tanggal}</h1> 			
  		</div>
-	<?php require_once('../php/uploadfix.php') ?>	
+	<?php require_once('../../php/uploadfix.php') ?>	
 	<div id="main_upload_container_form" class="main_upload_container_form">
 
 		<div style="width: 100%;background-color: transparent;padding-top: 3vh;">
 		 	<h3 id="status"><?php if (empty( $status[0]) == false) {echo $status[0];}else{echo "";} ?></h3>
 	 		<h3 id="status"><?php if (empty( $status[1]) == false) {echo $status[1];}else{echo "";} ?></h3>
 	 		<h3 id="status" style="color: #f46197;font-size: 20px;"><?php echo $realcode; ?></h3>
-	 		<h3 id="status"><?php echo $panduan; ?></h3>		
+	 		<h3 id="status"><?php echo $panduan; ?></h3>
 		</div>
 
-	 	<form id="main_upload" method="POST" enctype="multipart/form-data">
+
+		<!-- sekaligus -->
+<!-- 	 	<form style="height: auto;border-bottom: 1px solid #696969;" id="main_upload" method="POST" enctype="multipart/form-data">
+
+ 				<h2 style="color: #696969;font-size: 5vh;margin-top: 5vh;">Masukan Data Siswa Sekaligus</h2>
+
 				<div id="upload-btn-wrapper" style="margin-top: 5vh;">
-				  <button id="btn"  style="height: 8vh">Pilih File Soal</button>
-				  <input type="file" name="soal" id="bayangan" />
+				  <button id="btn"  style="height: 8vh">Pilih File</button>
+				  <input type="file" name="siswa-s" id="bayangan" />
 
 				</div>
 						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
 							PERHATIAN ! Hanya file soal dengan format <mark style="border-radius: .5vh;background: teal;color: white;padding: .2vh .4vh;">.csv</mark> yang bisa digunakan, dan hanya satu file soal yang diupload.
 
 						</h4>
-
-				<div id="upload-btn-wrapper" style="margin-top: 1vh;">
-				  <button id="btn" style="height: 8vh">Pilih File Lampiran (multi)</button>
-  	         	   <input type="file" name="files[]" multiple>
-
-				</div>
-						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
-							Pilih semua lampiran sekaligus, file lampiran adalah file gambar yang akan ditampilkan di soal. Pastikan lampiran sudah terlampir dengan benar di soal.
-						</h4>
-
-				<h6 style="margin-top: 6vh;" id="titles-ket-matauji">matauji:</h6>
-				<input style="margin-bottom: 0;height: 4.5vh;" type="text" name="matauji" id="ketr-matauji" placeholder="matauji" required="required">
-						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
-							Masukan hanya nama matauji.
-							<br>
-							ex:
-							<br>
-							<br>
-							<mark style="border-radius: .5vh;background: teal;color: white;padding: .5vh;">Ujian Bahasa Indonesia</mark> = &#9989;
-							<br>
-							<br>
-							<mark style="border-radius: .5vh;background: teal;color: white;padding: .5vh;">UAS Bahasa Indonesia 2020</mark> = &#9989;
-							<br>
-							<br>
-							<mark style="border-radius: .5vh;background: #D00000;color: white;padding: .5vh;">Bahasa Indonesia</mark> = &#9940;
-
-						</h4>
-				<h6 id="titles-ket-durasi" required="required">durasi:</h6>
-				<input style="margin-bottom: 0;height: 4.5vh;" type="number" name="durasi" placeholder="dalam menit ex: 90" id="ketr-durasi" required="required">
-						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
-							Masukan hanya berupa angka.
-							<br>
-							Masukan durasi sesuai standar dan akal sehat.</i>
-							<br>
-							ex:
-							<br>
-							<br>
-							<mark style="border-radius: .5vh;background: teal;color: white;padding: .5vh;">120</mark> = &#9989;
-							<br>
-							<br>
-							<mark style="border-radius: .5vh;background: #D00000;color: white;padding: .5vh;">seratus dua puluh</mark> =  &#9940;
-
-						</h4>
-				<h6 id="titles-ket-jumsol">jumlah soal:</h6>
-				<select style="margin-bottom: 0;height: 4.5vh;" id="ketr-jumsol" name="jumsol" required="required">		
-					<option id="ketr-option-jumsol" value="3" selected>3</option>
-					<option id="ketr-option-jumsol" value="4">4</option>
-					<option id="ketr-option-jumsol" value="5">5</option>
-					<option id="ketr-option-jumsol" value="6">6</option>
-					<option id="ketr-option-jumsol" value="7">7</option>
-					<option id="ketr-option-jumsol" value="8">8</option>
-					<option id="ketr-option-jumsol" value="9">9</option>
-					<option id="ketr-option-jumsol" value="10">10</option>
-
-				</select>
-
-						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
-							Masukan hanya berupa angka.
-						</h4>
-
-				<input style="height: 5vh;" type="submit" id="up-btn"  value="Upload" name="submit"/>
+				<input style="height: 5vh;margin-top: 5vh" type="submit" id="up-btn"  value="Upload" name="submit-sekaligus"/>
 		</form>
+ -->
+
+		<!-- satu persatu -->
+	 	<form style="height: auto;" id="main_upload" method="POST" enctype="multipart/form-data">
+ 				<h2 style="color: #696969;font-size: 5vh;padding-top: 10vh;">Masukan Data Siswa</h2>
+
+	 			
+	 			<h6 style="margin-top: 6vh;" id="titles-ket-matauji">nama:</h6>
+				<input style="margin-bottom: 0;height: 4.5vh;" type="text" name="namsis" id="ketr-matauji" placeholder="nama" required="required">
+						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
+							Masukan hanya nama siswa.
+						</h4>
+
+
+				<h6 id="titles-ket-durasi" required="required">NIS:</h6>
+				<input style="margin-bottom: 0;height: 4.5vh;" type="number" name="NIS" placeholder="NIS" id="ketr-durasi" required="required">
+						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
+							Masukan NIS dalam angka
+							<br>
+						</h4>
+
+
+
+	 			<h6 id="titles-ket-matauji">jurusan:</h6>
+				<input style="margin-bottom: 0;height: 4.5vh;" type="text" name="jurusan" id="ketr-matauji" placeholder="jurusan" required="required">
+						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
+							Masukan hanya nama jurusan.
+						</h4>
+
+
+
+	 			<h6 id="titles-ket-matauji">kelas:</h6>
+				<input style="margin-bottom: 0;height: 4.5vh;" type="text" name="kelas" id="ketr-matauji" placeholder="kelas" required="required">
+						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
+							Masukan hanya nama kelas.
+						</h4>
+
+
+
+				<h6 id="titles-ket-durasi" required="required">tahun masuk:</h6>
+				<input style="margin-bottom: 0;height: 4.5vh;" type="number" name="tahun" placeholder="tahun masuk" id="ketr-durasi" required="required">
+						<h4 id="n-awal" style="width: 100%;padding: 5% 0 5% 0;text-align: justify;">
+							Masukan tahun dalam angka
+							<br>
+						</h4>
+
+
+				<input style="height: 5vh;margin-top: 5vh" type="submit" id="up-btn"  value="Tambah" name="submit-siswa-one"/>
+		</form>
+
 	</div>
 
+	<div id="home-b" style="position: absolute;display: flex;top: 5vh;z-index: 5;margin-left: 25vw;">
+		<li><a style="font-size: 1.2vw;padding: 0;line-height: 3.2vw;float: none;" href="../" title="home"><mark id="home-b-m">&#127968;</mark></a></li>
+	</div>
+	<div id="home-b-n">
+		
+			<?php
+					$sql ="SELECT * FROM datasiswa ORDER BY `id` DESC";
+					$req1 = mysqli_query($conn, $sql);
+					if ($req1) {
+						if (mysqli_num_rows($req1)>0){
+			?>
+		 			<h1 id="top-tittle" style="margin-top: 2vh; font-size: 5vh;text-align: left;">Siswa Terdaftar</h1>		
+		 			<div style="	width: 95%;
+		 							z-index: 2;
+									height: 20px;
+									padding: 2.5%;
+									border: 1px solid #eeeeee;
+									background: #eeeeee;
+									/*border-radius: 10px;*/
+									margin-top: 20px;
+									/*box-shadow: 0 1.5vh 5vh rgba(0,0,0,.1);*/
+
+					">		 				
+			 			<table>
+							<tr>
+								<td style="width: 5%">no</td>
+								<td style="width: 20%">nama</td>
+								<td style="width: 15%">nis </td>
+								<td style="width: 15% ">jurusan</td>
+								<td style="width: 5%">kelas</td>
+								<td style="width: 15%">tahun</td>
+							</tr>
+						</table>
+		 			</div>
+	 
+		<?php 
+							$icn = 1;
+
+							while ($at = mysqli_fetch_array($req1)) {
+		?>
+		<div id="conten-container1" style="background-color: white;width: 95%;padding: 2.5%">
+				<table>
+					<tr style="text-align: left;">
+						<td style="width: 5%"><?php echo $icn."."; ?></td>
+						<td style="width: 20%"><?php echo $at['nama']; ?></td>
+						<td style="width: 15%"><?php echo $at['nis']; ?></td>
+						<td style="width: 15%;"><?php echo $at['jurusan']; ?></td>
+						<td style="width: 5%"><?php echo $at['kelas']; ?></td>
+						<td style="width: 10%"><?php echo $at['tahun'];?></td>
+						<td style="width: 5%">
+
+							<a style="list-style: none;font-style: normal;" href="../../php/hapussiswa.php?nis=<?php echo $at['nis']; ?>">🗑️</a>	
+
+						</td>
+					</tr>
+				</table>
+		</div>
+		<?php
+							$icn++;
+							}
+						}
+					}
+
+
+
+
+		?>
+
+
+
+
+	</div>
 
  </div>
-			<div id="home-b" style="position: absolute;display: flex;top: 5vh;z-index: 5;margin-left: 25vw;">
-
-
-				<li><a style="font-size: 1.2vw;padding: 0;line-height: 3.2vw;float: none;" href="../" title="home"><mark id="home-b-m">&#127968;</mark></a></li>
-
-
-				<div id="action-container">
-
-					<form method="post" action="../php/modify.php" style="width: 30vw;height: auto;padding-right: 1vw;padding-left: .2vw;margin: auto;">
-						<input placeholder="kode soal" autofocus id="action-kodes" type="text" name="kodes">
-						<input id="action-ubah" type="submit" name="ubah" value="ubah">
-						<input id="action-kemasan" type="submit" name="kemasan" value="kemasan">
-						<input id="action-hapus" type="submit" name="hapus" value="hapus">
-
-					</form>
-
-				</div>
-				<li><a style="font-size: 1.2vw;padding: 0;line-height: 3.2vw;float: none;" href="../upload/recap" title="home"><mark title="recap" id="home-b-m">&#9995;</mark></a></li>
-				<li><a style="margin: 0 ;font-size: 1.2vw;padding: 0;line-height: 3.2vw;float: none;" href="../upload/repsis" title="home"><mark title="repo siswa" id="home-b-m">&#128102;</mark></a></li>
-
-				</div>
-
  <div id="image-container">
 
 

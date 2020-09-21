@@ -42,7 +42,17 @@ body{
 	box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
 
 }
-
+#home-b-n{
+	position: absolute;
+	background-color: white;
+	width: 70vw;
+	height: 70vh;
+	z-index: 6;
+	top: 20vh;
+	margin-left: 25vw;
+	padding: 2vh;
+	overflow: auto;
+}
 #awal {
 
 	height: 100vh;

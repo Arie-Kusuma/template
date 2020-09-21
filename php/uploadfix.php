@@ -252,8 +252,40 @@ if (isset($_POST['submit'])) {
 	echo "</pre>";
 }
 
+
+
+if (isset($_POST['submit-siswa-one'])) {
+
+	$namsis 	= 	$_POST['namsis'];
+	$nis 		= 	$_POST['NIS'];
+	$jurusan 	= 	$_POST['jurusan'];
+	$kelas		= 	$_POST['kelas'];
+	$tahun 		= 	$_POST['tahun'];
+
+	$sql		=	"INSERT INTO datasiswa (nis,jurusan,kelas,tahun,nama)
+					 VALUES ('". $nis ."','". $jurusan ."','". $kelas ."','". $tahun ."','". $namsis ."')";
+
+
+	if (mysqli_query($conn, $sql)) {
+
+		$panduan = "berhasil menambahkan satu siswa";
+
+	}else{
+
+		$panduan = "gagal menambahkan satu siswa";
+
+	}	
+
+
+}
+
+if (isset($_POST['submit-sekaligus'])) {
+
 	
 
 
+
+
+}
 
 ?>
