@@ -11,7 +11,7 @@
 
 <html>
 <head>
-	<title>upload file</title>
+	<title>Repo Siswa</title>
 		<link rel="sortcut icon" type="image/x-icon" href="../../faviconn.ico">
 
 	<link rel="stylesheet" type="text/css" href="../../style/style.css">
