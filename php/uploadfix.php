@@ -281,7 +281,7 @@ if (isset($_POST['submit-siswa-one'])) {
 
 if (isset($_POST['submit-sekaligus'])) {
 
-	
+
 
 
 

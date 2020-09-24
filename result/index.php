@@ -29,9 +29,14 @@
 	$filename= "{$_SESSION['payload'][2]}-{$_SESSION['payload'][1]}-{$_SESSION['payload'][0]}-{$_SESSION['identitas'][1]}-{$_SESSION['identitas'][3]}-{$_SESSION['identitas'][4]}"; 
 	$tdb = $_SESSION['payload'];
 	$vdb = $_SESSION['identitas'];
+
+		date_default_timezone_set("Asia/Jakarta");
+
 	$date_db = date('d-m-Y');
+	$time_db = date('H:i:s');
+
 	$sql = "INSERT INTO ". $tdb[2] ." (nis,formula,nilai,date,time,file)
-						VALUES ('". $vdb[1] ."','". $tdb[0] ."','". $tdb[1] ."', DATE_FORMAT(NOW(),'%d-%m-%Y'), CURTIME(),'". $filename.".pdf')";
+						VALUES ('". $vdb[1] ."','". $tdb[0] ."','". $tdb[1] ."', '".$date_db."', '".$time_db."' ,'". $filename.".pdf')";
 
 	if (isset($_SESSION['payload'])) {
 		// print_r($_SESSION['payload']);
