@@ -51,6 +51,27 @@
 	// ketika satu key mengandung lebih dari 1 kata yang berarti mengandung lebih dari satu spasi akan membuat perhitungan levensthain tidak akurat
 	//
  	// 
+
+	function lev($s,$t) {
+	  $m = strlen($s);
+	  $n = strlen($t);
+	  for($i=0;$i<=$m;$i++) $d[$i][0] = $i;
+
+	  for($j=0;$j<=$n;$j++) $d[0][$j] = $j;
+
+	  for($i=1;$i<=$m;$i++) {
+
+	    for($j=1;$j<=$n;$j++) {
+
+	      $c = ($s[$i-1] == $t[$j-1])?0:1;
+	      $d[$i][$j] = min(	$d[$i-1][$j]+1,
+			      			$d[$i][$j-1]+1,
+							$d[$i-1][$j-1]+$c);
+	    }
+	  }
+	  return $d[$m][$n];
+	}
+
 function rawkoreksi($jawaban, $key){
 
 	$skortotal = array();
@@ -68,8 +89,8 @@ function rawkoreksi($jawaban, $key){
 
 		// parsing sekut v1
 
-		$zjawaban = preg_split( "/[\s,|-]+/", $jawaban);
-		$zkey = preg_split( "/[\s,|-]+/", $key);
+		$zjawaban = preg_split( "/[\s,|-|.]+/",$jawaban,-1,PREG_SPLIT_NO_EMPTY);;
+		$zkey = preg_split( "/[\s,|-|.]+/",$key,-1,PREG_SPLIT_NO_EMPTY);;
 
 		// $coa = explode(" ", $jawaban);
 
@@ -85,6 +106,12 @@ function rawkoreksi($jawaban, $key){
 		// print_r($zkey);
 		// echo "<br><br><br>";
 
+
+
+
+
+
+
 		$i = 0;
 		$levnilai = 0;
 		$d = 0;
@@ -97,7 +124,7 @@ function rawkoreksi($jawaban, $key){
 			// pacah jawaban pecahan karakter
 			foreach ($zjawaban as $keys) {
 				if (!empty($keys)) {
-					$lev = levenshtein(strtolower($dkey), strtolower($keys));
+					$lev = lev(strtolower($dkey), strtolower($keys));
 
 					$ctarget = count(str_split($dkey));
 					$csumber = count(str_split($keys));
