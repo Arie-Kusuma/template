@@ -89,8 +89,8 @@ function rawkoreksi($jawaban, $key){
 
 		// parsing sekut v1
 
-		$zjawaban = preg_split( "/[\s,|-|.]+/",$jawaban,-1,PREG_SPLIT_NO_EMPTY);;
-		$zkey = preg_split( "/[\s,|-|.]+/",$key,-1,PREG_SPLIT_NO_EMPTY);;
+		$zjawaban = preg_split( "/[-\s,|-|.]+/",$jawaban,-1,PREG_SPLIT_NO_EMPTY);;
+		$zkey = preg_split( "/[-\s,|-|.]+/",$key,-1,PREG_SPLIT_NO_EMPTY);;
 
 		// $coa = explode(" ", $jawaban);
 
@@ -123,7 +123,7 @@ function rawkoreksi($jawaban, $key){
 
 			// pacah jawaban pecahan karakter
 			foreach ($zjawaban as $keys) {
-				if (!empty($keys)) {
+				if (!empty($keys)||$keys == 0) {
 					$lev = lev(strtolower($dkey), strtolower($keys));
 
 					$ctarget = count(str_split($dkey));

@@ -15,6 +15,7 @@ require_once('server.php');
 	while ($i <= count($outjawaban)-1) {
 	
 		$data_k = rawkoreksi($outjawaban[$i], $key[$i]);
+
 		$data_j = rawkoreksi($outjawaban[$i], $jawaban[$i]);
 
 		$i++;
@@ -23,8 +24,8 @@ require_once('server.php');
 		// echo "<br>";
 		// (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 
-		$data_k = ($data_k - 0) * (90 - 0) / (100 - 0) + 0;
-		$data_j = ($data_j - 0) * (10 - 0) / (100 - 0) + 0;
+		$data_k = ($data_k - 0) * (90 - 0) / (100 - 0) + 0; //90% penilaian
+		$data_j = ($data_j - 0) * (10 - 0) / (100 - 0) + 0; //10% penilaian
 
 
 		$rawskor[$i] = (double)$data_k+(double)$data_j;
